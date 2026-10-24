@@ -51,7 +51,7 @@
         --text: #000;
         --muted: #4a5a6a;
         --accent: #007bff;
-        --verse: #d00000;
+        --verse: #0050b3;
         --shadow: 0 4px 6px rgba(0,0,0,0.04);
         --base: 29px;           /* حجم خط الذكر */
     }
@@ -63,7 +63,7 @@
             --text: #f1f5f9;
             --muted: #9fb0c2;
             --accent: #4da3ff;
-            --verse: #ff7a7a;
+            --verse: #7ab8ff;
             --shadow: none;
         }
     }
@@ -100,17 +100,6 @@
         align-items: center;
         gap: 10px;
     }
-    .reset {
-        font: inherit;
-        font-size: 16px;
-        color: var(--muted);
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        padding: 6px 14px;
-        cursor: pointer;
-    }
-    .reset:active { transform: scale(0.95); }
     .segmented {
         display: inline-flex;
         background: var(--card);
@@ -202,14 +191,13 @@
             <button type="button" data-set="am">الصباح</button>
             <button type="button" data-set="pm">المساء</button>
         </div>
-        <button type="button" class="reset" id="reset">إعادة العدّ</button>
     </div>
 </header>
 
 <!--
     data-count    : عدد مرات التكرار
     class="am"    : خاص بالصباح ، class="pm" : خاص بالمساء (وبدونهما يظهر في الوقتين)
-    class="verse" : آيات قرآنية (باللون الأحمر وبالرسم العثماني)
+    class="verse" : آيات قرآنية (باللون الأزرق وبالرسم العثماني)
     النقر على الذكر يُنقص العدد، وعند انتهائه يُعلَّم الذكر بأنه تمّ
 -->
 <ol class="list" id="list">
@@ -402,12 +390,6 @@
             save();
             setPeriod(b.dataset.set);
         });
-    });
-
-    document.getElementById('reset').addEventListener('click', function () {
-        state.done[body.dataset.period] = {};
-        save();
-        render();
     });
 
     // عند انتقال الوقت (مثلًا بقاء الصفحة مفتوحة بعد العصر) تبدأ جلسة جديدة
