@@ -1,6 +1,6 @@
 {
-  "name": "أذكار اليوم والليلة",
-  "short_name": "أذكار",
+  "name": "athakar",
+  "short_name": "athakar",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./",
