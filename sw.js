@@ -1,6 +1,6 @@
 // يحفظ الصفحة وخطوطها ليعمل الموقع بلا إنترنت.
 // عند تعديل أي ملف هنا غيّر رقم الإصدار ليُحدَّث الحفظ.
-var CACHE = 'athakar-v5';
+var CACHE = 'athakar-v6';
 var FILES = [
     './',
     'index.html',
@@ -10,8 +10,7 @@ var FILES = [
     'icon-512.png',
     'fonts/amiri-bold-arabic.woff2',
     'fonts/amiri-bold-latin.woff2',
-    'fonts/amiri-quran-arabic.woff2',
-    'fonts/amiri-quran-latin.woff2'
+    'fonts/kfgqpc-hafs.woff2'
 ];
 
 self.addEventListener('install', function (e) {
